@@ -1,0 +1,17 @@
+.game-title {
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.game {
+  margin-left: 40px;
+  margin-bottom: 40px;
+  border-style: solid;
+  border-width: thin;
+  border-color: lightgrey;
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  box-shadow: 3px 3px 7px 7px lightgray;
+}
