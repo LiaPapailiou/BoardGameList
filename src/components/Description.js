@@ -31,7 +31,7 @@ export class Description extends Component {
         <img src={image} className="img" alt="img"></img>
         <div>
         <p className="description">{description}</p>
-        <span className="extra-info">Players: {minPlayers}  -  {maxPlayers} / Playing Time: {playingTime} / Year Published: {yearPublished}</span>
+        <span className="extra-info">Players: {minPlayers}  -  {maxPlayers} / Playing Time: {playingTime} mins / Year Published: {yearPublished}</span>
         <button onClick={() =>window.open(urlBuy, "_blank")}>Buy on Amazon</button>
         {/* <button onClick={() =>window.open(url, "_blank")}>Watch on YouTube</button> */}
         </div>

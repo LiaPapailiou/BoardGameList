@@ -1,5 +1,6 @@
 .container {
   font-family: 'Montserrat', sans-serif, italic;
+  display: flex;
   align-content: center;
   background-color: rgb(226, 232, 230);
   justify-content: center;
@@ -7,4 +8,9 @@
   flex-wrap: wrap;
   align-content: center;
   flex-direction: row; 
+}
+
+.title {
+  font-size: 40px;
+  text-shadow: 1px 1px 8px #6f6262;
 }

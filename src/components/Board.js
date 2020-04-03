@@ -29,6 +29,7 @@ class Board extends Component {
     }
     return (
       <div className="container">
+        <h2 className="title">Most Popular Board Games</h2>
         <p>
         {this.state.data.map((game) => <Game key={game} name={game.name} gameId={game.gameId}/>)}
         </p>

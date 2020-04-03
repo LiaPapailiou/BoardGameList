@@ -1,10 +1,11 @@
 .container {
   display: flex;
+  background-color: rgb(226, 232, 230);
 }
 
 
 .description p {
-  background-color: rgba(247, 247, 247, 0.995);
+  background-color: rgb(226, 232, 230);
   font-size: 14px;
   max-width: 700px;
   max-height: 220px;
@@ -24,8 +25,9 @@
 }
 
 .extra-info {
-  margin-left: 20px;
+  margin-left: 40px;
   margin-right: 60px;
+  font-size: 13px;
 }
 
 .container button {
@@ -34,7 +36,7 @@
   border-radius: 10px;
   height: 30px;
   margin-bottom: 15px;
-  margin-left: 15px;
+  margin-left: 150px;
 }
 
 .container button:hover {
