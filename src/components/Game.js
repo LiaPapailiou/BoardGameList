@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Description from './Description'
+import VideoID from './VideoID'
 import './Game.css'
 
 export class Game extends Component {
@@ -49,7 +50,8 @@ export class Game extends Component {
             playingTime={this.state.data.playingTime}
             yearPublished={this.state.data.yearPublished}
            /> 
-          </div>             
+          {/* <VideoID name={this.state.data.name} />     */}
+          </div>
       </div>
     )
   }

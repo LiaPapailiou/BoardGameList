@@ -38,16 +38,16 @@ app.get('/api/boardgames/description/:gameId',  (req,res) => {
 
 // TODO
 // Get ID from second API
-app.get('/api/boardgames/:name', (req, res) => {
-  fetch(`https://www.boardgameatlas.com/api/search?name=${req.params.name}&client_id=GRYCkBFss8`)
+app.get('/api/boardgames/:name', async (req, res) => {
+  await fetch(`https://www.boardgameatlas.com/api/search?name=${req.params.name}&client_id=GRYCkBFss8`)
     .then((res) => res.json())
     .then((data) => {
       if(!data) {
         res.status(404).send('Resource Not Found');
         return;
       }
-    const id = data.games[0].id;
-    res.send(id);
+    // const id = JSON.stringify(data.games[0].id);
+    res.send(data.games[0].id);
   });
 });
 
@@ -60,8 +60,8 @@ app.get('/api/boardgames/video/:gameId', (req, res) => {
         res.status(404).send('Resource Not Found');
         return;
       }
-      const videoLink = data.videos[0].url;
-      res.send(videoLink);
+      // const videoLink = JSON.stringify(data.videos[0].url);
+      res.send(data.videos[0].url);
     });
 });
 

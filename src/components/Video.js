@@ -6,22 +6,27 @@ export class Video extends Component {
     super(props);
     this.state = {
       spinner: 'Loading...',
+      id: this.props,
       data: null,
-      id: this.props.id,
     }
   }
   componentDidMount() {
     this.fetchData(this.props.id);
   }
+  componentDidUpdate(prevProps) {
+    if(this.props.id !== prevProps.id) {
+      this.fetchData(this.props.id)
+    }
+  }
   fetchData = (id) => {
-    fetch(`https://www.boardgameatlas.com/api/game/videos?limit=20&client_id=GRYCkBFss8&game_id=${id}`)
+    fetch(`http://localhost:9000/api/boardgames/video/${id}`)
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   }
   render() {
     return (
       <div>
-        <Description url={this.state.data.url} />
+        <Description url={this.state.data} />
       </div>
     )
   }

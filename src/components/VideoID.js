@@ -15,7 +15,7 @@ export class VideoID extends Component {
   }
   
   fetchData = (name) => {
-    fetch(`http://localhost:9000//api/boardgames/${name}`)
+    fetch(`http://localhost:9000/api/boardgames/${name}`)
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   }
@@ -29,7 +29,7 @@ export class VideoID extends Component {
     }
     return (
       <div>
-        <Video id={this.state.data.id} />
+        <Video id={this.state.data} />
       </div>
     ) 
 }
